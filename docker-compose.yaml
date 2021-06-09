@@ -1,0 +1,27 @@
+services:
+
+  service-1:
+    container_name: "service-1"
+    image: ollienichols/service-1
+    build: service_1
+    ports:
+    - target: 5000
+      published: 5000
+    environment:
+      DATABASE_URI: ${DATABASE_URI}
+
+  service-2:
+    container_name: "service-2"
+    image: ollienichols/service-2
+    build: service_2/
+
+  service-3:
+    container_name: "service-3"
+    image: ollienichols/service-3
+    build: service_3/
+
+  service-4:
+    container_name: "service-4"
+    image: ollienichols/service-4
+    build: service_4/
+  
